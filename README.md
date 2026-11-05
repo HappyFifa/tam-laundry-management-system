@@ -1,64 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 🧺 T.A.M Laundry - Management Information System
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" />
 </p>
 
-## About Laravel
+A comprehensive, production-grade web-based management information system designed to solve operational bottlenecks in micro-scale laundry businesses. Built with the **Laravel** framework, this system natively implements the **M/M/s Queuing Theory Algorithm** to mathematically calculate Estimated Completion Times (EWP) based on real-time machine workloads.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Core Features & Technical Highlights
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **🧠 Algorithmic Queue Management (M/M/s):** Dynamically calculates and sets order pickup schedules to prevent bottlenecking at the washing stations, strictly bound to the store's operational hours.
+- **💳 Dynamic Digital Payment:** Integrated with the **Duitku API** to generate real-time QRIS Snap Tokens and asynchronously handle webhook callbacks for automated status updates.
+- **📍 Geospatial Logistics Tracking:** Utilizes **Nominatim API** (OpenStreetMap) and **Leaflet.js** to map customer coordinates, facilitating accurate pickup and delivery navigation.
+- **📱 Automated WhatsApp Notifications:** Leverages the **Fonnte API** to send automated, real-time status updates directly to customers' WhatsApp numbers.
+- **🔐 Secure Role-Based Access Control:** Strict segregation of duties among Customers (self-service ordering), Admins (verification & operational updates), and Couriers (logistics management).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🏗️ System Architecture
+The system adopts a robust **Client-Server architecture** implementing the **MVC (Model-View-Controller)** pattern. Data exchanges with third-party APIs (Duitku, Nominatim, Fonnte) are handled asynchronously using JSON payloads.
 
-## Learning Laravel
+<img width="1396" height="734" alt="System Architecture" src="https://github.com/user-attachments/assets/69e9619c-75ef-493b-98b4-7175ddc307e8" />
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📸 Application Previews
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Admin Dashboard & Order Validation | QRIS Payment Gateway Generation |
+| :---: | :---: |
+| <img width="2559" height="1394" alt="Admin Dashboard" src="https://github.com/user-attachments/assets/2725094e-d8bc-469d-9de4-586b39e86fda" /> | <img width="2554" height="1467" alt="QRIS Payment" src="https://github.com/user-attachments/assets/e72e5988-d2f9-43d6-a2fd-09abe086e0c5" /> |
 
-## Laravel Sponsors
+## 🚀 Installation & Setup (Local Environment)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/HappyFifa/tam-laundry-management-system.git](https://github.com/HappyFifa/tam-laundry-management-system.git)
+2. Install dependencies:
+   ```bash
+   composer install
+   npm install && npm run build
+3. Environment Setup:
+   ```Copy .env.example to .env.
+   Configure your local DB_DATABASE, DB_USERNAME, and API Keys (Duitku & Fonnte).
+4. Generate application key and run migrations:
+   ```Bash
+   php artisan key:generate
+   php artisan migrate
+5. Serve the application:
+   ```Bash
+   php artisan serve
+Developed by Fikri Defi Wulanto as a comprehensive thesis project and academic journal publication.
